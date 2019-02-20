@@ -1,0 +1,18 @@
+<h3 class="animated fadeIn fast">Resultados:  <small>{{nombre}}</small> </h3>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el término: {{nombre}}
+    </div>
+  </div>
+
+</div>
+
+<div class="card-columns animated fadeIn">
+
+  <app-heroe-tarjeta [indice]="hero.idx" [heroe]="hero" *ngFor="let hero of heroes"></app-heroe-tarjeta>
+
+
+</div>
